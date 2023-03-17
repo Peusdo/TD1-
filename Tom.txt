@@ -1,0 +1,53 @@
+1. Fonction qui trie des tuples en fonction de leur deuxième élément
+
+Identification des tests unitaires :
+
+    - Test d'un cas simple où l'entrée est une liste non vide de tuples non triés :
+
+    - Test d'un cas où tous les tuples ont la même deuxième valeur :
+
+    - Test d'un cas où tous les tuples ont des valeurs différentes :
+
+    - Test d'un cas où l'entrée est une liste vide :
+
+    - Test d'un cas où l'entrée n'est pas une liste :
+
+    - Test d'un cas où la liste contient des tuples de longueur différente :
+
+Identification des renforcements de code
+
+    - Ajouter une vérification supplémentaire pour s'assurer que les deuxièmes éléments sont de type numérique (int, float, etc.)
+
+    - Ajouter une vérification pour s'assurer que l'entrée ne contient pas de doublons
+
+
+
+
+
+
+
+2. Fonction qui trouve le chemin le plus court entre deux points dans un graphe pondéré représenté par un dictionnaire
+
+Identification des tests unitaires :
+
+    - Test d'un cas simple avec une entrée valide
+
+    - Test avec une entrée non valide : entrée vide
+
+    - Test d'une entrée non valide : chaine
+
+    - Test d'une entrée non valide : tuple incomplet
+
+    - Test d'une entrée non valide : doublons
+
+Identification des renforcements de code
+
+    - Ajouter des tests de performance pour évaluer la vitesse de tri pour de grandes entrées.
+
+    - Ajouter une documentation pour expliquer la fonction et les paramètres d'entrée attendus.
+
+
+
+
+
+
