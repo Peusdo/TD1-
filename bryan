@@ -1,0 +1,32 @@
+Test de génération de mot de passe avec la longueur par défaut (12 caractères) et caractères spéciaux inclus.
+Test de génération de mot de passe avec une longueur personnalisée et caractères spéciaux inclus.
+Test de génération de mot de passe avec une longueur personnalisée et caractères spéciaux exclus.
+Test de génération de mot de passe avec une longueur de 1 caractère et caractères spéciaux inclus.
+Test de génération de mot de passe avec une longueur de 1 caractère et caractères spéciaux exclus.
+Test de la conversion en morse d'une chaîne de caractères contenant uniquement des lettres.
+Test de la conversion en morse d'une chaîne de caractères contenant uniquement des chiffres.
+Test de la conversion en morse d'une chaîne de caractères contenant des lettres, des chiffres et des espaces.
+Test de la conversion en morse d'une chaîne de caractères contenant des lettres majuscules et minuscules.
+Test de la conversion en morse d'une chaîne de caractères contenant des caractères non pris en charge (par exemple, caractères spéciaux).
+
+----------------------------------------------------------------------
+
+Ce code est un script Python de tests unitaires pour vérifier le bon fonctionnement de deux fonctions : generer_mot_de_passe() et texte_vers_morse(), qui se trouvent dans un fichier nommé td1_cours.py. Le module unittest est utilisé pour écrire et exécuter les tests.
+
+La classe TestFonctions hérite de unittest.TestCase et contient plusieurs méthodes de test, chacune vérifiant un aspect spécifique des fonctions mentionnées ci-dessus.
+
+Les tests pour la fonction generer_mot_de_passe() sont les suivants :
+
+test_generer_mot_de_passe_defaut: Vérifie que la longueur du mot de passe généré par défaut est de 12 caractères.
+test_generer_mot_de_passe_longueur_personnalisee: Vérifie que la longueur du mot de passe généré avec une taille personnalisée est correcte.
+test_generer_mot_de_passe_sans_caracteres_speciaux: Vérifie que le mot de passe généré sans caractères spéciaux ne contient que des lettres et des chiffres.
+test_generer_mot_de_passe_longueur_1: Vérifie que la longueur du mot de passe généré avec une taille de 1 est correcte.
+test_generer_mot_de_passe_longueur_1_sans_caracteres_speciaux: Vérifie que le mot de passe généré avec une taille de 1 et sans caractères spéciaux ne contient que des lettres et des chiffres.
+Les tests pour la fonction texte_vers_morse() sont les suivants :
+
+test_texte_vers_morse_lettres: Vérifie que la conversion d'un texte composé uniquement de lettres en morse est correcte.
+test_texte_vers_morse_chiffres: Vérifie que la conversion d'un texte composé uniquement de chiffres en morse est correcte.
+test_texte_vers_morse_lettres_chiffres_espaces: Vérifie que la conversion d'un texte composé de lettres, chiffres et espaces en morse est correcte.
+test_texte_vers_morse_lettres_majuscules: Vérifie que la conversion d'un texte composé de lettres majuscules en morse est correcte.
+test_texte_vers_morse_caracteres_non_pris_en_charge: Vérifie que la conversion d'un texte contenant des caractères non pris en charge en morse renvoie un morse avec un '?' pour ces caractères.
+Enfin, la dernière partie du script (if __name__ == "__main__":) permet d'exécuter les tests unitaires lorsqu'on lance le script.
