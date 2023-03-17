@@ -1,0 +1,9 @@
+Teste unitaire pour générateur identité :
+-teste pour la limite d'identité
+-teste pour la nom duplication d'identité
+
+teste unitaire pour le second degré
+-teste quand discriminant négatif
+-teste quand discriminant null
+-teste quand discriminant positif
+-test si aucun paramètre n'est rentrer
