@@ -1,0 +1,27 @@
+Tests unitaires : 
+	Fonction de la création d'une chaîne de caractères :
+		Vérificaion du type des paramètres : 
+			Civilité : Un string, soit Mr, Monsieur, Mme ou Madame
+			Nom, Prenom  : Un string
+			Age : Un entier
+			Poids, Taille : Un float
+		Vérification de la validité de la valeur :
+			Age, Poids, Taille : La valeur doit être positive
+
+	Fonction création d'une liste de tuple :
+		Vérification du type des paramètres :
+			word_list : Type list avec seulement des string
+
+		Vérification de la validité de la valeur des paramètres :
+			word_list : La longueur de la liste, contenant que des mots
+
+Renforcement de code : 
+	Fonction de la création d'une chaîne de caractères :
+		Vérification du format et transformation en fonction de cela :
+			Nom : tranformation en majuscule
+			Prenom : transformation avec une majuscule en premier
+			Taille, Poids : transformation avec 1 chiffre derriere la virgule
+
+	Fonction création d'une liste de tuple :
+		Eliminaion des doublons
+		Elimination des caractères spéciaux des mots
