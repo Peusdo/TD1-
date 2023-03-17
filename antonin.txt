@@ -1,0 +1,14 @@
+La fonction get_most_frequent_words utilise les tests suivants :
+- Vérifie si le paramètre texte est une chaîne de caractères (string) en utilisant isinstance(). Si ce n'est pas le cas, elle renvoie une erreur de type avec un message explicite.
+- Utilise l'expression régulière re.findall pour extraire les mots de texte. Elle teste si le résultat est une liste en utilisant isinstance(). Si ce n'est pas le cas, elle renvoie une erreur de type avec un message explicite.
+
+La fonction plot_wordcloud_most_frequent_words_len_more_6() utilise les tests suivants :
+- Vérifie que l'argument 'texte' est une chaîne de caractères.
+- Vérifie que la variable 'fig' est un dictionnaire (représentation d'un objet figure de Plotly).
+
+La fonction adjectives() utilise les tests suivants :
+- Vérifie que l'argument 'texte' est une chaîne de caractères.
+- Vérifie que la liste d'adjectifs extraits est une liste.
+
+La fonction plot_wordcloud_most_frequent_adjectives_last_30() utilise les tests suivants :
+- Vérifie que la variable 'fig' est un dictionnaire (représentation d'un objet figure de Plotly).

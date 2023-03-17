@@ -33,12 +33,18 @@ def get_most_frequent_words(texte):
     Get the most frequent words
     :return: list of tuples (word, number of occurences)
     """
+    if not isinstance(texte, str):
+        raise TypeError(f"texte must be a string, not {type(texte)}")
     # Get the more frequent words
     words = re.findall(r'\w+', texte.lower())
+    if not isinstance(words, list):
+        raise TypeError(f"words must be a list not {type(words)}")
     return Counter(words).most_common()
 
 
 def plot_wordcloud_most_frequent_words_len_more_6(texte):
+    if not isinstance(texte, str):
+        raise TypeError(f"texte must be a string not {type(texte)}")
     fig = None
     try:
         words = get_most_frequent_words(texte)
@@ -58,6 +64,8 @@ def plot_wordcloud_most_frequent_words_len_more_6(texte):
         fig = pio.to_json(fig)
     except Exception as e:
         print("Error in plot_wordcloud_most_frequent_words_len_more_6: ", e)
+    if not isinstance(fig, dict):
+        raise TypeError(f"fig must be a dict (plotly fig like) not {type(fig)}")
     return [fig, "Nuage de mots des mots les plus fréquents de taille supérieure ou égale à 6"]
 
 
@@ -66,9 +74,13 @@ def adjectives(texte):
     Get the adjectives of the text
     :return: list of adjectives
     """
+    if not isinstance(texte, str):
+        raise TypeError("texte must be a string")
     nlp = en_core_web_sm.load()
     doc = nlp(texte)
     adjectives_list = [token.text for token in doc if token.pos_ == "ADJ"]
+    if not isinstance(adjectives_list, list):
+        raise TypeError("adjectives_list must be a list")
     return adjectives_list
 
 
@@ -88,9 +100,20 @@ def plot_wordcloud_most_frequent_adjectives_last_30(texte):
         fig = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
     except Exception as e:
         print("Error in plot_wordcloud_most_frequent_adjectives_last_30: ", e)
+    if not isinstance(fig, dict):
+        raise TypeError(f"fig must be a dict (plotly fig like), not {type(fig)}")
     return [fig, "Nuage de mots des 30 adjectifs les plus fréquents"]
 
 
 if __name__ == '__main__':
+    # Tests unitaires
+    text = ""
+    get_most_frequent_words(text)
+    adjectives(text)
+    plot_wordcloud_most_frequent_words_len_more_6(text)
+    plot_wordcloud_most_frequent_adjectives_last_30(text)
+    text = 1
+    get_most_frequent_words(text)
+    adjectives(text)
     plot_wordcloud_most_frequent_words_len_more_6(text)
     plot_wordcloud_most_frequent_adjectives_last_30(text)
